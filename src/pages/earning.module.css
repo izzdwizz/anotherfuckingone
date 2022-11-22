@@ -1,0 +1,17 @@
+.earnholder{
+
+    display:flex;
+    flex-direction: column;
+    justify-content:space-between;
+    
+}
+.earncard{
+
+    display:flex;
+    justify-content: center;
+    gap: 20px;
+    width:100%;
+    height:5rem;
+    background: rgb(51 55 62);
+    margin-left:10rem;
+}
