@@ -272,6 +272,7 @@ h3{
     height: 2rem;
     border: 1px solid #aba6c0;
     border-radius: 10px;
+    color:#20232a
   }
   
   .button {
@@ -302,5 +303,58 @@ h3{
     color: #fff;
     border-radius: 12px;
   }
+
+  
+
+.clip{
+
+    display:flex;
+    gap: 10px;
+}
+
+.clip .input {
+    width:100%;
+    margin: 0.5rem 0;
+    padding: 2vw;
+    height: 1rem;
+    background:#575d69;
+    background-color: rgb(43, 49, 57);
+    margin: 0.5rem 0;
+    padding: 1rem;
+    height: 2rem;
+    border: 1px solid #aba6c0;
+    border:none;
+    border-radius: 10px;
+  }
+  
+  
+  .clip .input::placeholder{
+    color: #fefefe4f !important;
+    font-style: bold;
+    font-size: 0.8rem;
+
+  }
+  /* .css_fky{
+
+    height:auto;
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    display: flex;
+    position: relative;
+    -webkit-box-align: center;
+    align-items: center;
+    line-height: 1.6;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    width: 50%;
+    height: 40px;
+    background-color: rgb(43, 49, 57);
+    padding: 0px 155px;
+    margin-top: 5px;
+    margin-bottom:8px;
+
+} */
+
 /* 
   @media(max-width:) */

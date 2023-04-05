@@ -1,7 +1,5 @@
 import React, { useState} from 'react';
-import classes from './Grid.module.css';
 import classed from './grid_reformed.module.css';
-import {Container,Row, Col} from "react-bootstrap";
 import Auto from './Auto';
 import Manual from './Manual';
 
@@ -13,6 +11,9 @@ function Grid_reformed() {
     setToggleState(index);
   };
 
+  // const [Preference, setPreference] = useState('');
+  // const [leverage, setLeverage] = useState('');
+  // const [investAmount, setInvestAmount] = useState('');
 
   return (
 
@@ -45,12 +46,11 @@ function Grid_reformed() {
         <div
           className={toggleState === 2 ?  `${classed.content} ${classed.active_content}` : `${classed.content}`}
         >
-          <>
+   
 
         <Manual/>
  
-         </>
-        
+         
 
          
 

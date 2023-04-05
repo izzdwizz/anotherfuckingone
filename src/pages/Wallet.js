@@ -4,7 +4,7 @@ import { useState, useRef } from 'react';
 import {Row, Col, Container} from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
 import {FiClipboard} from "react-icons/fi";
-
+import Grid_reformed from './DASHBOARD/Grids/Grid_reformed';
 function Wallet() {
 
   
@@ -44,9 +44,11 @@ function Wallet() {
     // 
 
 <section>
+
+
     <div className={classed.wallet}>
 
-        
+{/*         
 
         <Container className={classed.container}>
           <Row className={classed.row}>
@@ -210,13 +212,22 @@ function Wallet() {
 
       
         </Row>
-        </Container>
+
+      
+        </Container>  */}
+
+      <div>
+      <Grid_reformed/>
+      </div>
        
     </div>
-    </section>
 
     
+    </section>
 
+      
+    
+ 
 
   )
 }

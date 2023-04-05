@@ -1,0 +1,91 @@
+.claim_holder {
+
+
+    margin-top: 50px;
+    padding: 30px 0;
+    max-width: fit-content;
+    min-width: none;
+    overflow: hidden;
+    border-radius: 12px;
+    background: rgb(51 55 62);
+    box-sizing: border-box;
+    box-shadow: 0 22.36px 30.0124px rgba(11, 11, 11, 0.19);
+}
+
+.list_4 {
+
+
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+
+
+
+}
+
+
+.list_4 h1 {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    color: #fefefe;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+
+}
+
+.list_4 li span {
+    height: fit-content;
+    font-weight: 500;
+    font-size: 6px;
+    line-height: 9px;
+    text-align: center;
+    color: #fff;
+    padding: 3px 4px 2px;
+    background: #4a4ae2;
+    border-radius: 12px;
+    white-space: nowrap;
+
+
+
+}
+
+.button {
+    border: none;
+    width: 20%;
+    background: linear-gradient(90.21deg, #fcd535 -5.91%, #fcd435a6 111.58%);
+    background: #575d69;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fefefe;
+}
+
+.button:hover {
+
+    opacity: 0.9;
+}
+
+/* Claim Accordion */
+
+.claim_wallet {
+    height: 0px;
+    opacity: 0;
+    transition:
+        opacity 0.6s ease-in-out,
+        height 0.6s 0.6s ease-in-out !important;
+    color: #333;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.claim_wallet .animated {
+
+    opacity: 1;
+    transition:
+        height 0.6s ease-in-out,
+        opacity 0.6s 0.3s ease-in-out !important;
+}
+

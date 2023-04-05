@@ -70,8 +70,8 @@ const App = () => {
 
                 {/* pages  */}
                 <Route path="/trade" element={<Trades />} />
-                <Route path="/wallet" element={<Wallet />} />
-                <Route path="/customers" element={<Customers />} />
+                <Route path="/customize" element={<Wallet />} />
+                {/* <Route path="/customers" element={<Customers />} /> */}
 
               </Routes>
             </div>

@@ -1,278 +1,233 @@
-import React, { useEffect } from 'react';
-import classes from './trades.module.css';
-import { useState, useRef } from 'react';
-import {Row, Col, Container} from 'react-bootstrap';
+import React, { useEffect } from "react";
+import classes from "./trades.module.css";
+import { useState, useRef } from "react";
+import { Row, Col, Container } from "react-bootstrap";
+import Accordion from "./Accordion";
+import Accordion_2 from "./Accordion_2";
+import Claim_card from "./Claim_card";
+import Form from 'react-bootstrap/Form';
+import {FiClipboard,FiChevronDown} from "react-icons/fi";
 
-// import Chevron from './chevron.svg';
-import Accordion from './Accordion';
-import Modal from './Modal';
-import Backdrop from './Backdrop';
-import Grid_reformed from './Grid/Grid_reformed';
 
 function Trades() {
-
   // Accordion function
-
-  const [toggle, setToggle] = useState(false)
+  const [toggle, setToggle] = useState(false);
   const [heightEl, setHeightEl] = useState();
 
-  const refHeight = useRef()
+  const refHeight = useRef();
 
-  useEffect(()=>{
+  useEffect(() => {
+    setHeightEl(`${refHeight.current.scrollHeight}px`);
+  }, []);
 
-      setHeightEl(`${refHeight.current.scrollHeight}px`)
-
-
-  }, [])
-
-  const toggleState = ()=>{
-
-    setToggle(!toggle)
-  }
+  const toggleState = () => {
+    setToggle(!toggle);
+  };
 
   // button
 
+  const [amount, setAmount] = useState("");
 
-  const [amount, setAmount] = useState('');
-    
-    const handleSubmit = (e) => {
-      e.preventDefault();
-      console.log(amount);
-  }
+  
+  const [text1, setText1] = useState('Copy Trade API Key');
 
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setText1('LustyWhale'+ amount + '3xLev'+'80%'+ '30');
+  };
 
-  //Modal
 
-  const [showModal, setShowModal] = useState();
-
-  function showModalHandler() {
-    setShowModal(true);
-  }
-
-  function closeModalHandler() {
-    setShowModal(false);
-  }
-
-  const [isOpen, setIsOpen]= useState(false)
   return (
-
-
-
-    // Add discuss the bots
-    // fixate on their performances and ROI in given periods
-    // trading limit
-    // suggested trade amounts
-    // 
-
-<section>
-    <div className={classes.trades}>
-
-            <h1>
-            Manage and build your crypto stack.<br></br>
-              Invest smarter.
-
-            </h1>
-            <h3>  Choose your plan to get started</h3>
+    <section>
+      <div className={classes.trades}>
+        <h1>
+          Manage and build your crypto stack.<br></br>
+          Invest smarter.
+        </h1>
+        <h3> Choose your plan to get started</h3>
 
         <Container className={classes.container}>
           <Row className={classes.row}>
-          {/* <Col className={classes.col_2}>
-        <div className={classes.card_3}>
-          <h1>Bitsquant Advanced</h1>
+            <Col className={classes.col_2}>
+              <div className={classes.card_3}>
+                <h1>BTQ Free</h1>
 
-          <div className={classes.roi}> 
+                <div className={classes.roi}>
+                  <h2> +40% </h2>
 
-            <h2> +300% </h2>
-
-              <div>
-                <p>Average ROI over a months period</p>
-              </div>
-
-
-          </div>
-
-            <div className={classes.list_4}>
-
-                <ul>
-                  <li><p>All our standard features </p><div className={classes.span}>Coming soon</div></li>
-                  <li><p>2 Active Trading Bots </p> <span>Coming soon</span></li>
-                  <li><p>Applies 3X leverage </p> <span>Coming soon</span></li>
-                  <li><p>$25,000 monthly limit </p></li>
-                  <li><p>Recommended margin: $5,000 </p></li>
-
-                  <Accordion className={classes.accord}/>
-                  
-
-                  </ul>
-
-                 
-
-
-            </div>
-         
-           
-
-        </div>
-        </Col> */}
-
-        <Col className={classes.col_2}>
-        <div className={classes.card_3}>
-          <h1>Bitsquant Standard</h1>
-
-          <div className={classes.roi}> 
-
-            <h2> +40% </h2>
-
-              <div>
-                <p>Average ROI over a months period</p>
-              </div>
-
-
-          </div>
-
-            <div className={classes.list_4}>
-
-                <ul>
-                  <li><p>All our standard features </p><div className={classes.span}>Coming soon</div></li>
-                  <li><p>2 Active Trading Bots </p> <span>Coming soon</span></li>
-                  <li><p>Applies 1X leverage </p> <span>Coming soon</span></li>
-                  <li><p>$25,000 monthly limit </p></li>
-                  <li><p>Recommended margin: $5,000 </p></li>
-
-                  <Accordion/>
-
-                  </ul>
-
-                 
-
-
-            </div>
-         
-           
-
-        </div>
-        </Col>
-
-        <Col className={classes.col_2}>
-        <div className={classes.card_3}>
-          <h1>Bitsquant Lite</h1>
-
-          <div className={classes.roi}> 
-
-            <h2> +55% </h2>
-
-              <div>
-                <p>Average ROI over a months period</p>
-              </div>
-
-
-          </div>
-
-            <div className={classes.list_4}>
-
-                <ul>
-                  <li><p>All our standard features </p><div className={classes.span}>Coming soon</div></li>
-                  <li><p>3 Active Trading Bots </p> <span>Coming soon</span></li>
-                  <li><p>Applies 2.5X leverage </p> <span>Coming soon</span></li>
-                  <li><p>$40,000 monthly limit </p></li>
-                  <li><p>Recommended margin: $15,000 </p></li>
-
-                  <Accordion/>
-
-                  </ul>
-
-                 
-
-
-            </div>
-         
-           
-
-        </div>
-        </Col>
-
-
-
-        <Col className={classes.col_2}>
-        <div className={classes.card_3}>
-          <h1>Bitsquant Advanced</h1>
-
-          <div className={classes.roi}> 
-
-            <h2> +80% </h2>
-
-              <div>
-                <p>Average ROI over a months period</p>
-              </div>
-
-
-          </div>
-
-            <div className={classes.list_4}>
-
-                <ul>
-                  <li><p>All our standard features+ </p><div className={classes.span}>Coming soon</div></li>
-                  <li><p>5 Active Trading Bots </p> <span>Coming soon</span></li>
-                  <li><p>Applies 3X leverage </p> <span>Coming soon</span></li>
-                  <li><p>$100,000 monthly limit </p></li>
-                  <li><p>Recommended margin: $30,000 </p></li>
-
-                   <div className={classes.place_trade}>
-
-                      <button onClick={toggleState} className={classes.accordion_visible}>Place Trade   
-                      
-                       
-                        
-                        </button>
-
-                    <div className={toggle ? `${classes.accordion_toggle}${classes.animated}` : `${classes.accordion_toggle}`  } style={{height: toggle ? `${heightEl}` : '0px'}}ref={refHeight}> 
-                    <form>
-                    <label className={classes.label} htmlFor="amount">Enter amount</label>
-                <input className={classes.input} value={amount} onChange={(e) => setAmount(e.target.value)} name="amount" id="amount" placeholder="" />
-
-                  <button className={classes.button} type='submit'>Place Order</button>
-                    </form>
-
-                    
-                    
-                    </div>
-
-
+                  <div>
+                    <p>Average ROI over a months period</p>
                   </div>
+                </div>
 
+                <div className={classes.list_4}>
+                  <ul>
+                    <li>
+                      <p>All our standard features </p>
+                      <div className={classes.span}>Coming soon</div>
+                    </li>
+                    <li>
+                      <p>2 Active Trading Bots </p> <span>Coming soon</span>
+                    </li>
+                    <li>
+                      <p>Applies 1X leverage </p> <span>Coming soon</span>
+                    </li>
+                    <li>
+                      <p>$25,000 monthly limit </p>
+                    </li>
+                    <li>
+                      <p>Recommended margin: $5,000 </p>
+                    </li>
+
+                    <Accordion />
                   </ul>
+                </div>
+              </div>
+            </Col>
 
-                 
+            <Col className={classes.col_2}>
+              <div className={classes.card_3}>
+                <h1>BTQ Lite</h1>
 
+                <div className={classes.roi}>
+                  <h2> +55% </h2>
 
-            </div>
-         
-           
+                  <div>
+                    <p>Average ROI over a months period</p>
+                  </div>
+                </div>
 
-        </div>
-        </Col>
-        
-        </Row>
+                <div className={classes.list_4}>
+                  <ul>
+                    <li>
+                      <p>All our standard features </p>
+                      <div className={classes.span}>Coming soon</div>
+                    </li>
+                    <li>
+                      <p>3 Active Trading Bots </p> <span>Coming soon</span>
+                    </li>
+                    <li>
+                      <p>Applies 2.5X leverage </p> <span>Coming soon</span>
+                    </li>
+                    <li>
+                      <p>$40,000 monthly limit </p>
+                    </li>
+                    <li>
+                      <p>Recommended margin: $15,000 </p>
+                    </li>
+
+                    <Accordion />
+                  </ul>
+                </div>
+              </div>
+            </Col>
+
+            <Col className={classes.col_2}>
+              <div className={classes.card_3}>
+                <h1>BTQ Pro</h1>
+
+                <div className={classes.roi}>
+                  <h2> +80% </h2>
+
+                  <div>
+                    <p>Average ROI over a months period</p>
+                  </div>
+                </div>
+
+                <div className={classes.list_4}>
+                  <ul>
+                    <li>
+                      <p>All our standard features+ </p>
+                      <div className={classes.span}>Coming soon</div>
+                    </li>
+                    <li>
+                      <p>5 Active Trading Bots </p> <span>Coming soon</span>
+                    </li>
+                    <li>
+                      <p>Applies 3X leverage </p> <span>Coming soon</span>
+                    </li>
+                    <li>
+                      <p>$100,000 monthly limit </p>
+                    </li>
+                    <li>
+                      <p>Recommended margin: $30,000 </p>
+                    </li>
+
+                    <div className={classes.place_trade}>
+                      <button
+                        onClick={toggleState}
+                        className={classes.accordion_visible}
+                      >
+                        Place Trade
+                        <FiChevronDown className={toggle && `${classes.active}`} />
+                      </button>
+
+                      <div
+                        className={
+                          toggle
+                            ? `${classes.accordion_toggle}${classes.animated}`
+                            : `${classes.accordion_toggle}`
+                        }
+                        style={{ height: toggle ? `${heightEl}` : "0px" }}
+                        ref={refHeight}
+                      >
+                        <form>
+                          <label className={classes.label} htmlFor="amount">
+                            Enter amount
+                          </label>
+                          <input
+                            className={classes.input}
+                            value={amount}
+                            onChange={(e) => setAmount(e.target.value)}
+                            name="amount"
+                            id="amount"
+                            placeholder=""
+                          />
+                          <div className={classes.css_fky}>
+                            <div className={classes.clip}>
+                              <Form.Control
+                                className={classes.input}
+                                type="number"
+                                placeholder={text1}
+                                aria-label="Disabled input example"
+                                readOnly
+                              />
+
+                              <button
+                                onClick={() => {
+                                  navigator.clipboard.writeText(text1);
+                                }}
+                              >
+                                <FiClipboard />
+                              </button>
+                            </div>
+                          </div>
+
+                          <button className={classes.button} type="btn" onClick={handleSubmit}>
+                            Place Order
+                          </button>
+                        </form>
+                      </div>
+                    </div>
+                  </ul>
+                </div>
+              </div>
+            </Col>
+          </Row>
         </Container>
-        <Row>
-          <div >
 
-            <button className={classes.modal_active}  onClick={showModalHandler}> Customise your Trades </button>
+        {/* <div >
 
-            {showModal && <Backdrop onClick={closeModalHandler} />}
-
-            {showModal && <Modal onClose={closeModalHandler}/>}
-          </div>
-
-        </Row>
-    </div>
+            <button className={classes.modal_active}> Customise your Trades </button>
+          </div> */}
+        {/* 
+        <Accordion_2 /> */}
+        {/*         
+        <Claim_card /> */}
+      </div>
     </section>
-
-    
-
-
-  )
+  );
 }
 
 export default Trades;

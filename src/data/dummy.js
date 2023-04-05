@@ -488,7 +488,7 @@ export const links = [
         icon: <FiTrendingUp />,
       },
       {
-        name: 'Wallet',
+        name: 'Customize',
         icon: <FiCreditCard />,
       },
      
