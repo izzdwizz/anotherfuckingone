@@ -1,0 +1,219 @@
+.bordy {
+	display: flex;
+	justify-content: center;
+}
+
+.Apps {
+	text-align: center;
+	display: flex;
+	min-height: 100vh;
+	align-items: center;
+	justify-content: center;
+	color: #a2a5b9;
+	background-image: linear-gradient(79deg, #7439db, #c66fbc 48%, #f7944d);
+	background: #f0f0f0;
+	background: #0b0e11;
+}
+
+.visible {
+	display: flex !important;
+	visibility: visible !important;
+	justify-content: center;
+	margin-top: 5px;
+}
+
+.invisible {
+	display: none;
+	visibility: hidden;
+}
+
+.authformcontainer,
+.loginform {
+	display: flex;
+	flex-direction: column;
+	background: #fff;
+	background: #181a20;
+}
+
+.authformcontainer {
+	margin-top: 20rem;
+}
+
+.authformcontainers h2 {
+	color: #fefefe;
+	margin-bottom: 1rem;
+}
+.authformcontainer h2 {
+	color: rgb(93, 93, 93);
+	color: #fefefee3;
+}
+
+@media screen and (min-width: 600px) {
+	.authformcontainer {
+		padding: 3rem 3rem !important;
+		border: 1px solid white !important;
+		border: none !important;
+		width: fit-content;
+		justify-self: center;
+		border-radius: 10px !important;
+		margin: 0.5rem !important;
+		margin-top: 14rem !important;
+	}
+
+	.timer p {
+		margin-top: 10px;
+		color: #a2a5b9;
+		font-size: 0.8rem;
+	}
+}
+
+label {
+	text-align: left;
+	padding: 0.25rem 0;
+}
+
+input {
+	margin: 0.5rem 0;
+	padding: 1rem;
+	border: 1px solid #aba6c0;
+	border-radius: 10px;
+	margin: 0.5rem 0;
+	padding: 1rem;
+	border: 2px solid #aba6c0;
+	border: none;
+	background: #303137;
+	color: #fefefe;
+	border-radius: 10px;
+}
+
+input:focus {
+	background: #f0f0f0;
+	border: transparent;
+	color: #333;
+}
+
+.loginform input {
+	margin: 1rem 0;
+	padding: 1rem 0;
+	font-size: 1rem;
+	text-align: center;
+}
+
+.loginform .button {
+	border: none;
+	width: 100%;
+	background: linear-gradient(90.21deg, #1a5dec -5.91%, #1f23ec 111.58%);
+	padding: 20px !important;
+	border-radius: 10px;
+	cursor: pointer;
+	color: #fefefea6;
+}
+
+button:hover {
+	opacity: 0.9;
+}
+
+.linkbtn {
+	margin-top: 1rem;
+	background: none;
+	color: white;
+	font-size: 0.8rem;
+	color: #a2a5b9;
+}
+
+.linkbtn span {
+	color: #1a5dec;
+
+	opacity: 1;
+}
+
+.linkbtn span:hover {
+	color: #1a5dec;
+	color: #fbd335a3;
+	opacity: 0.7;
+}
+
+.full {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.full .reg_check {
+	font-size: 1em;
+	flex-direction: row;
+}
+
+.full p {
+	font-size: 0.7em;
+	padding: 0px 5px;
+}
+
+.full p span {
+	padding: 0 2.5px;
+	position: relative;
+}
+.full p a {
+	color: #1a5dec;
+	color: #fbd335a3;
+	opacity: 1;
+	text-decoration: none;
+}
+
+.full p a:hover {
+	opacity: 0.7;
+}
+
+.labelselect {
+	display: flex;
+	flex-direction: inherit;
+}
+
+.labelselect .select {
+	padding: 10px;
+	width: 60%;
+	margin-bottom: 8px;
+	margin-top: 14px;
+	border-radius: 6px;
+	background: #303137;
+	color: #a2a5b9;
+	border: none;
+}
+
+.option select-items {
+	color: #a2a5b9 !important;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 450px) {
+	.authformcontainer {
+		padding: 3rem 3rem;
+		border-radius: 12px;
+		margin-top: 14rem;
+	}
+
+	.full {
+		margin-top: 1.5rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: baseline;
+		font-size: 0.98rem;
+	}
+
+	.loginform input {
+		margin: 1rem 0;
+		padding: 1rem 0;
+		font-size: 1rem;
+		text-align: center;
+	}
+
+	.timer p {
+		margin-top: 10px;
+		color: #a2a5b9;
+		font-size: 0.8rem;
+	}
+}

@@ -1,0 +1,246 @@
+.testimony_header {
+	margin-bottom: 50px;
+}
+
+.card {
+	padding-top: 10px;
+	background: rgb(66, 69, 255);
+	background-color: #fff;
+	border-radius: 4px;
+	min-height: fit-content;
+	height: 21em;
+	width: 16em;
+	margin-bottom: 50px;
+	margin-top: 3em;
+	box-shadow: 0 44.7757px 52.222px rgba(89, 89, 89, 0.0654574),
+		0 20.1753px 27.9204px rgba(89, 89, 89, 0.0572737),
+		0 6.13165px 15.6519px rgba(89, 89, 89, 0.0464559),
+		0 -1.08328px 8.31263px rgba(89, 89, 89, 0.033453);
+}
+
+.cardp {
+	padding-top: 10px;
+	background-color: #fff;
+	border-radius: 10px;
+	min-height: fit-content;
+	height: 4.5em;
+	width: 11em;
+	padding: 13px;
+	margin-bottom: 50px;
+}
+
+.carousel_move {
+	animation: updown 15s linear infinite;
+	transition: ease-in;
+}
+
+.carousel_moves {
+	animation: updown-REVERSE 15s linear infinite;
+	animation-direction: reverse;
+	transition: ease-in;
+}
+
+.carouselp {
+	display: flex;
+	flex-direction: row;
+	width: max-content;
+	gap: 16px;
+	/* animation: updown 2.2s linear infinite;
+     */
+}
+
+.carouselp:hover {
+	animation-play-state: paused;
+}
+
+.react-multi-carousel-track {
+	width: 100%;
+}
+
+.testimony_image {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	padding: 30px;
+}
+
+.testimony_image img {
+	border-radius: 100%;
+	height: 45%;
+	width: 45%;
+}
+
+.testimony_text {
+	box-sizing: border-box;
+	padding-left: 0;
+	padding-right: 0;
+	padding-bottom: 10px;
+	width: 100%;
+	min-height: fit-content;
+}
+
+.testimony_text p {
+	font-size: 0.8em;
+	width: 90%;
+
+	color: #333;
+	font-style: italic;
+	font-weight: 600;
+	padding-bottom: 5px;
+}
+
+.container_1 {
+	display: flex;
+	gap: 50px;
+	justify-content: center;
+}
+
+.skill_slider {
+	width: 80%;
+	margin: 0 auto;
+	position: relative;
+}
+.skill_slider .item img {
+	width: 50%;
+	margin: 0 auto 15px auto;
+}
+
+@keyframes updown {
+	0% {
+		transform: translateX(0%);
+	}
+
+	10% {
+		transform: translateX(-100%);
+	}
+
+	20% {
+		transform: translateX(-200%);
+	}
+
+	30% {
+		transform: translateX(-300%);
+	}
+
+	40% {
+		transform: translateX(-400%);
+	}
+
+	50% {
+		transform: translateX(-500%);
+	}
+
+	60% {
+		transform: translateX(-600%);
+	}
+
+	70% {
+		transform: translateX(-700%);
+	}
+
+	80% {
+		transform: translateX(-600%);
+	}
+
+	90% {
+		transform: translateX(-500%);
+	}
+}
+
+@keyframes updown-REVERSE {
+	0% {
+		transform: translateX(0%);
+	}
+
+	10% {
+		transform: translateX(700%);
+	}
+
+	20% {
+		transform: translateX(600%);
+	}
+
+	30% {
+		transform: translateX(500%);
+	}
+
+	40% {
+		transform: translateX(400%);
+	}
+
+	50% {
+		transform: translateX(300%);
+	}
+
+	60% {
+		transform: translateX(200%);
+	}
+
+	70% {
+		transform: translateX(100%);
+	}
+
+	80% {
+		transform: translateX(0%);
+	}
+
+	90% {
+		transform: translateX(-500%);
+	}
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 680px) {
+	.show {
+		display: none;
+	}
+
+	.owl_carousel2 {
+		display: none;
+	}
+
+	.cardp {
+		padding-top: 10px;
+		background-color: #fff;
+		border-radius: 10px;
+		min-height: fit-content;
+		height: 3em;
+		width: 3.9em;
+
+		padding: 13px;
+		margin-bottom: 50px;
+	}
+
+	.carousel_move {
+		animation: updown 15s linear infinite;
+		transition: ease-in-out;
+	}
+}
+
+/* ****Carousel visibility***** */
+@media (min-width: 680px) {
+	.automate-cards-2 {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.carousel_move {
+		animation: none;
+		transition: ease-in;
+		display: grid;
+		grid-template-columns: auto;
+		gap: 20px;
+	}
+
+	.carousel_moves {
+		animation: updown-REVERSE 15s linear infinite;
+		transition: ease-in;
+		display: none;
+	}
+
+	.react-multi-carousel-track {
+		gap: 40rem;
+	}
+}

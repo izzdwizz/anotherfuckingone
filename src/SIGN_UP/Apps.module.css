@@ -1,0 +1,349 @@
+.Apps {
+	text-align: center;
+	display: flex;
+	min-height: 100vh;
+	align-items: center;
+	justify-content: center;
+	color: #a2a5b9;
+	background-image: linear-gradient(79deg, #7439db, #c66fbc 48%, #f7944d);
+	background: #f0f0f0;
+	background: #0b0e11;
+}
+
+.authformcontainer,
+.authformcontainers,
+.loginform,
+.registerform {
+	display: flex;
+	flex-direction: column;
+	background: #fff;
+	background: #181a20;
+}
+
+.authformcontainers {
+	margin-top: 15rem;
+}
+
+.authformcontainers h2 {
+	color: #fefefe;
+	margin-bottom: 1rem;
+}
+.authformcontainer h2 {
+	color: rgb(93, 93, 93);
+	color: #fefefee3;
+}
+
+@media screen and (min-width: 600px) {
+	.authformcontainer {
+		padding: 3rem 5rem !important;
+		border: 1px solid white !important;
+		border: none !important;
+		border-radius: 10px !important;
+		margin: 0.5rem !important;
+		margin-top: 8rem !important;
+	}
+
+	.authformcontainers {
+		padding: 2.5rem 2.5rem !important;
+		border: 1px solid white !important;
+		border: none !important;
+		border-radius: 10px !important;
+		margin: 0.5rem !important;
+		margin-top: 8rem !important;
+	}
+}
+
+label {
+	text-align: left;
+	padding: 0.25rem 0;
+}
+
+input {
+	margin: 0.5rem 0;
+	padding: 1rem;
+	border: 1px solid #aba6c0;
+	border-radius: 10px;
+	margin: 0.5rem 0;
+	padding: 1rem;
+	border: 2px solid #aba6c0;
+	border: none;
+	background: #303137;
+	color: #fefefe;
+	border-radius: 10px;
+}
+
+input:focus {
+	background: #f0f0f0;
+	border: transparent;
+	color: #333;
+}
+
+.registerform label {
+	text-align: left;
+	padding: 0.25rem 0;
+	font-size: 0.95rem;
+}
+
+.registerform input {
+	margin: 0.5rem 0;
+	padding: 1rem;
+	border: 1px solid #aba6c0;
+	border-radius: 10px;
+	margin: 0.2rem;
+	padding: 0.4rem;
+	border: 2px solid #aba6c0;
+	border: none;
+	background: #303137;
+	color: #fefefe;
+	border-radius: 10px;
+}
+
+.registerform input::placeholder {
+	font-size: 0.8rem;
+}
+
+.registerform input:focus {
+	background: #f0f0f0;
+	border: transparent;
+	color: #333;
+}
+
+.registerform .button {
+	border: none;
+	background: linear-gradient(90.21deg, #1a5dec -5.91%, #1f23ec 111.58%);
+	padding: 0.7rem !important;
+	width: 100%;
+	margin-top: 10px;
+	border-radius: 10px;
+	cursor: pointer;
+	color: #fefefea6;
+}
+
+.loginform .button {
+	border: none;
+	width: 100%;
+	background: linear-gradient(90.21deg, #1a5dec -5.91%, #1f23ec 111.58%);
+	padding: 20px !important;
+	border-radius: 10px;
+	cursor: pointer;
+	color: #fefefea6;
+}
+
+button:hover {
+	opacity: 0.9;
+}
+
+.linkbtn {
+	margin-top: 1rem;
+	background: none;
+	color: white;
+	font-size: 0.8rem;
+	color: #a2a5b9;
+}
+
+.linkbtn span {
+	color: #1a5dec;
+
+	opacity: 1;
+}
+
+.linkbtn span:hover {
+	color: #1a5dec;
+	color: #fbd335a3;
+	opacity: 0.7;
+}
+
+.full {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.full .reg_check {
+	font-size: 1em;
+	flex-direction: row;
+}
+
+.full p {
+	font-size: 0.7em;
+	padding: 0px 5px;
+}
+
+.full p span {
+	padding: 0 2.5px;
+	position: relative;
+}
+.full p a {
+	color: #1a5dec;
+	color: #fbd335a3;
+	opacity: 1;
+	text-decoration: none;
+}
+
+.full p a:hover {
+	opacity: 0.7;
+}
+
+.labelselect {
+	display: flex;
+	flex-direction: inherit;
+}
+
+.labelselect .select {
+	padding: 10px;
+	width: 60%;
+	margin-bottom: 8px;
+	margin-top: 14px;
+	border-radius: 6px;
+	background: #303137;
+	color: #a2a5b9;
+	border: none;
+}
+
+.option select-items {
+	color: #a2a5b9 !important;
+}
+
+.verify .icon:hover {
+	cursor: pointer;
+}
+
+.unverified input {
+	width: 100%;
+}
+
+.verify {
+	display: flex;
+	background: #303137;
+	border-radius: 10px;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.verify input {
+	width: 100%;
+}
+
+.verify .icon {
+	margin-right: 5px;
+}
+
+/* The switch - the box around the slider */
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 3em;
+	height: 1em;
+	margin-bottom: 10px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+/* The slider */
+
+.sliders {
+	display: flex;
+	flex-direction: row-reverse;
+	column-gap: 10px;
+	justify-content: flex-end;
+}
+.slider {
+	position: fixed;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+.slider:before {
+	position: fixed;
+	content: "";
+	height: 1em;
+	width: 1em;
+	left: 4px;
+	bottom: 4px;
+	background-color: white;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+input:checked + .slider {
+	background-color: #1a5dec;
+}
+
+input:focus + .slider {
+	box-shadow: 0 0 1px #1a5dec;
+}
+
+input:checked + .slider:before {
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+	border-radius: 34px;
+}
+
+.slider.round:before {
+	border-radius: 50%;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 450px) {
+	.authformcontainers {
+		width: 94vw;
+		padding: 3rem 2rem;
+		border-radius: 12px;
+		margin-top: 4rem;
+	}
+
+	.authformcontainer {
+		padding: 3rem 3rem;
+		border-radius: 12px;
+		margin-top: 4rem;
+	}
+
+	.full {
+		margin-top: 1.5rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: baseline;
+		font-size: 0.98rem;
+	}
+
+	.full p {
+		position: relative;
+		left: -3.5%;
+	}
+
+	.verify {
+		display: flex;
+		background: #303137;
+		border-radius: 10px;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.verify input {
+		width: 100%;
+	}
+
+	.verify .icon {
+		margin-right: 5px;
+	}
+}

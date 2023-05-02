@@ -1,0 +1,129 @@
+.card {
+	background-color: #fefefef9;
+
+	background: linear-gradient(180deg, #181a20e6 -5.91%, #181a20 111.58%);
+}
+
+.wrapper {
+	display: flex;
+	height: fit-content;
+	width: 80%;
+	color: #000;
+	background: transparent;
+	padding-top: 30px;
+	margin-top: 80px;
+	justify-content: center;
+	align-items: center;
+	box-sizing: border-box;
+	margin-bottom: 100px;
+}
+
+.accordion {
+	width: 500px;
+}
+
+.item {
+	display: flex;
+	flex-direction: column;
+	background-color: #2f3035;
+	margin-bottom: 15px;
+	padding: 15px 20px;
+	border: none;
+	box-shadow: 0px 60px 50px -25px rgb(0 0 0 / 35%);
+	box-shadow: 0 44.7757px 52.222px rgba(18, 18, 18, 0.065),
+		0 20.1753px 27.9204px rgba(18, 17, 17, 0.057),
+		0 6.13165px 15.6519px rgba(7, 7, 7, 0.682),
+		0 -1.08328px 8.31263px rgba(7, 7, 7, 0.033);
+	border-radius: 2px;
+	justify-content: center;
+}
+
+.FAQheader {
+	padding: 20px;
+}
+
+.FAQheader h2 {
+	display: flex;
+	font-size: 2.8em;
+	color: transparent;
+	font-weight: 600;
+	justify-content: center;
+}
+
+.title {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	text-align: left !important;
+	width: 67%;
+	width: 100%;
+	margin-bottom: 0;
+	/* 
+    border-bottom: 0.1px solid rgba(216, 215, 215, 0.575); */
+	padding: 5px 0;
+}
+
+.title h2 {
+	text-align: center;
+	/* color: hsl(237deg 12% 33%); */
+	font-size: 1rem;
+	color: #f9f2f2;
+	color: #fefefe;
+	font-weight: 300;
+	width: 100%;
+}
+
+.title span {
+	color: #c4bbbb;
+	font-size: 2rem;
+}
+
+.answer {
+	color: #c4bbbb;
+	max-height: 0;
+	overflow: hidden;
+	transition: ease-in-out 0.19s;
+	font-size: 0.8rem;
+	width: 100%;
+}
+
+.imgolder {
+	margin-top: 100px;
+}
+
+.imgolder img {
+	height: 80%;
+	width: 80%;
+	opacity: 0.8;
+}
+
+.imgholder img {
+	height: 5em;
+	width: 5em;
+}
+
+.imgolder img {
+	animation: updown 3s linear infinite;
+}
+
+@keyframes updown {
+	0% {
+		transform: translateX(-40px);
+	}
+
+	50% {
+		transform: translateX(40px);
+	}
+
+	100% {
+		transform: translateX(-40px);
+	}
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 768px) {
+	.wrapper {
+		width: 93%;
+	}
+}
