@@ -31,12 +31,12 @@ const Ecommerce = () => {
 	const { currentColor, currentMode } = useStateContext();
 	const { token } = useStateContext();
 	const [price, setPrice] = useState();
-
+ 
 	useEffect(() => {
 		getBTC();
-		const intervalId = setInterval(getBTC, 4000);
+		//const intervalId = setInterval(getBTC, 4000);
 
-		return () => clearInterval(intervalId);
+		//return () => clearInterval(intervalId);
 	}, []);
 
 	const getBTC = async () => {
