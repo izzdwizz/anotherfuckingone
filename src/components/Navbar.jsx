@@ -43,13 +43,16 @@ const Navbar = () => {
 	const navigate = useNavigate();
 	const { username, setUsername } = useStateContext();
 	const redirectClick = () => {
-		if (!username) {
-			navigate('/');
-		}
+		// if (!username) {
+		// 	//
+		// 	alert('no username found');
+		// }
+		navigate('/main');
 	};
 	const { token } = useStateContext();
 
 	const { click } = useStateContext();
+	const { premiumPage, setPremiumPage } = useStateContext();
 
 	useEffect(() => {
 		getUserDetails();
@@ -58,7 +61,7 @@ const Navbar = () => {
 	const getUserDetails = async () => {
 		axios
 			.get(
-				'https://backend-btq.onrender.com/myprofile',
+				'https://backend-btqx.onrender.com/myprofile',
 
 				{
 					headers: {
@@ -68,8 +71,12 @@ const Navbar = () => {
 					withCredentials: false,
 				}
 			)
-			.then((response) => {
+			.then(async (response) => {
 				console.log(response);
+				const userName = await response.data.user.username;
+				const psm = await response.data.user.premium;
+				setUsername(userName);
+				setPremiumPage(psm);
 			})
 
 			.catch((error) => {
@@ -77,6 +84,7 @@ const Navbar = () => {
 			});
 	};
 
+	console.log(premiumPage);
 	useEffect(() => {
 		const handleResize = () => setScreenSize(window.innerWidth);
 
@@ -109,11 +117,7 @@ const Navbar = () => {
 				icon={<AiOutlineMenu />}
 			/>
 			<div className='flex'>
-				{/* <NavButton title="Cart" customFunc={() => handleClick('cart')} color={currentColor} icon={<FiShoppingCart />} />
-        <NavButton title="Chat" dotColor="#03C9D7" customFunc={() => handleClick('chat')} color={currentColor} icon={<BsChatLeft />} />
-        */}
-				{/* <NavButton title="Notification" dotColor="rgb(254, 201, 15)" customFunc={() => handleClick('notification')} color={currentColor} icon={<RiNotification3Line />} />
-				 */}
+		
 				<TooltipComponent content='Profile' position='BottomCenter'>
 					<div
 						className='flex items-center gap-2 cursor-pointer p-1 hover:bg-light-gray rounded-lg'
@@ -125,12 +129,18 @@ const Navbar = () => {
 							alt='user-profile'
 						/>
 						<p>
-							<span onClick={redirectClick()} className='text-gray-400 text-14'>
-								{!username ? 'Click to Login to your account' : 'Hi,'}
-							</span>{' '}
-							<span className='text-gray-400 font-bold ml-1 text-14'>
-								{username}
-							</span>
+							{!username ? (
+								<span className='text-gray-400 text-14'>
+									Click to Login to your account
+								</span>
+							) : (
+								<>
+									<span className='text-gray-400 text-14'>Hi,</span>
+									<span className='text-gray-400 font-bold ml-1 text-14'>
+										{username}
+									</span>
+								</>
+							)}
 						</p>
 						<MdKeyboardArrowDown className='text-gray-400 text-14' />
 					</div>
